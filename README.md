@@ -97,3 +97,10 @@ useEffect(()=>{
 },[])
 
 ```
+
+my other repositories i used react in ,for reference,
+
+```
+https://github.com/yousefnegmeldin/notAnotherTaskApp/tree/main/client/src
+https://github.com/yousefnegmeldin/filmpire
+```
