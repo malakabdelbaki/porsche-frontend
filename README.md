@@ -21,7 +21,7 @@ Each page will be located in the pages src/pages folder. this is where your work
 We will be using something called React Router V6 to switch between pages, all you have to know is
 that if you want to switch pages by pressing a button, do NOT use anchor tags use the following code
 
-```
+```js
 import { Link } from 'react-router-dom';
 
 ****
@@ -30,31 +30,9 @@ import { Link } from 'react-router-dom';
 </Link>
 ```
 
-As for fetching data, you have to use the useEffect hook to fetch data, so if your page has the
-functionality for fetching data you have to use similar logic as defined below
-
-We will also be using the axios library to fetch data as it is plain simple,
-
-```
-import axios from 'axios' //import at the beginning of the project
-
-useEffect(()=>{
-    const body = {
-        testData:"testData"
-    }
-    const headers = headers: {
-      	Content-Type': 'application/json',
-  		'Authorization': 'json-web-token'
-    }
-    const response = await axios.get('http://localhost:3000/api/v1/products',body,headers);
-    console.log(response.data);
-},[])
-
-```
-
 Now to update the state or to use a variable in the html you should use the useState hook,
 
-```
+```js
 import {useState} from 'react'
 
 const [text,setText] = useState("test!");
@@ -62,5 +40,32 @@ const [text,setText] = useState("test!");
 ...
 
 <div>{text}</div>
+
+```
+
+As for fetching data, you have to use the useEffect hook to fetch data, so if your page has the
+functionality for fetching data you have to use similar logic as defined below
+
+We will also be using the axios library to fetch data as it is plain simple,
+
+```js
+import axios from 'axios' //import at the beginning of the project
+
+useEffect(()=>{
+    const body = {
+        testData:"testData"
+    }
+    const headers = headers: {
+        'Content-Type': 'application/json',
+  		'Authorization': 'json-web-token' //make sure to replace this with the token from localstorage, we will implement it soon.
+    }
+    const response = await axios.get('http://localhost:3000/api/v1/products',body,headers);
+    console.log(response.data);
+    //e.g = ['test','test2','test3']
+    setProductsArray(response.data);
+    // ASSUMING YOU HAVE A PRODUCT ARRAY this is how you will set the product array
+    //you can then map over this array on your page to display each singular element
+
+},[])
 
 ```
