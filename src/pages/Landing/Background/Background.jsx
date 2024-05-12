@@ -3,13 +3,13 @@ import img1 from '../../assets/porsche-car-1.webp'
 import img2 from '../../assets/porsche-car-2.webp'
 import img3 from '../../assets/porsche-car-3.webp'
 import img4 from '../../assets/porsche-car-4.webp'
-
+import vid from '../../assets/porscheVideo.webp'
 const Background = ({playStatus, cnt}) =>{
 
   if(playStatus){
     return(
       <video className='Background fade-in' autoPlay loop muted>
-        <source src={vid1} type = 'video/mp4'/>
+        <source src={vid} type = 'video/mp4'/>
       </video>
     )
   }
