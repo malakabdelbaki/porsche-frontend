@@ -98,6 +98,36 @@ useEffect(()=>{
 
 ```
 
+Mapping over data will look like this
+
+```js
+<div className="card_container">
+  {productArray.map((product) => {
+    <Card product={product} />; //Card is another component and its like a function, so im passing the data into the card
+    //so i can then use this data in the card component.
+  })}
+</div>
+```
+
+Posting data to apis should look like this
+
+```js
+import axios from 'axios'
+
+function handleSignUp(){
+    const body = {
+        username:username,
+        password: password
+    }
+    const res = await axios.post('/api/v1/signup',body);
+    console.log(res);
+}
+
+...
+<input value={username} onChange={(e)=>setUsername(e.target)}>
+<button onClick={()=>handleSignUp}>Sign up</button>
+```
+
 my other repositories i used react in ,for reference,
 
 ```
