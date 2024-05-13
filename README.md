@@ -79,7 +79,11 @@ We will also be using the axios library to fetch data as it is plain simple,
 ```js
 import axios from 'axios' //import at the beginning of the project
 
+
+const [products,setProducts] = useState([]);
+
 useEffect(()=>{
+  const fetchData = async () => {
     const body = {
         testData:"testData"
     }
@@ -87,10 +91,11 @@ useEffect(()=>{
         'Content-Type': 'application/json',
   		'Authorization': 'json-web-token' //make sure to replace this with the token from localstorage, we will implement it soon.
     }
-    const response = await axios.get('http://localhost:3000/api/v1/products',body,headers);
-    console.log(response.data);
+    const result = await axios(`http://localhost:3000/api/v1/product/${userID}`,body,headers);
+     return result.data;
+ };
     //e.g = ['test','test2','test3']
-    setProductsArray(response.data);
+    fetchData().then((response)=>{setProducts(response)});
     // ASSUMING YOU HAVE A PRODUCT ARRAY this is how you will set the product array thats using the useState hook
     //you can then map over this array on your page to display each singular element
 

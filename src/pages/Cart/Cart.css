@@ -1,0 +1,10 @@
+.productCard{
+    display: flex;
+    justify-content: space-between;
+    flex-direction:column;
+    background-color: #F4F4F4;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
