@@ -2,7 +2,6 @@
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import Admin from "./pages/Admin/Admin";
 import Landing from "./pages/Landing/Landing";
-import logo from './assets/porsche-logo.webp'
 
 function App() {
 
