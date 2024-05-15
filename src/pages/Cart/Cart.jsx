@@ -26,6 +26,10 @@ function Cart() {
             </div>
         )
       })}
+
+      <div className='test'>
+      </div>
+      <div>Checkout</div>
     </div>
   )
 }
