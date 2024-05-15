@@ -13,8 +13,8 @@ const Product = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`/api/v1/product/${id}`);
-        console.log('API Response:', response.data); // Log the API response(testing)
+        const response = await axios.get(`http://localhost:3000/api/v1/product/${id}`);
+        console.log(response); // Log the API response(testing)
         if (response.data) {
           setProduct(response.data);
           setLoading(false);
