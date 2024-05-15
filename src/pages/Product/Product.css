@@ -1,0 +1,37 @@
+
+
+.product-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.product-description {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #666;
+}
+
+.product-price {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #007bff;
+}
+
+.product-category {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #666;
+}
+
+.product-production-year {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #666;
+}
