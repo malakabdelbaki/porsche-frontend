@@ -11,7 +11,7 @@ const Background = ({playStatus, cnt}) =>{
    if(cnt===0){
     return (
       <div id = "wrapper">
-    <img src = {img1} className='Background fade-in' alt = ""/>
+    <img src = {img1} className='background fade-in' alt = ""/>
       <div className='displayText'>
         <h5>Elevate your drive</h5>
         <h5>to a symphony </h5>
@@ -23,7 +23,7 @@ const Background = ({playStatus, cnt}) =>{
   else if(cnt===1){
     return (
       <div  id = "wrapper">
-    <img src = {img2} className='Background fade-in' alt = ""/>
+    <img src = {img2} className='background fade-in' alt = ""/>
       <div className='displayText'>
         <h5>Indulge in the artistry</h5>
         <h5>of automotive </h5>
@@ -35,7 +35,7 @@ const Background = ({playStatus, cnt}) =>{
   else if(cnt===2){
     return (
       <div  id = "wrapper">
-    <img src = {img3} className='Background fade-in' alt = ""/>
+    <img src = {img3} className='background fade-in' alt = ""/>
       <div className='displayText'>
         <h5>Where sophistication meets</h5>
         <h5>exhilaration on every  </h5>
@@ -47,7 +47,7 @@ const Background = ({playStatus, cnt}) =>{
   else if(cnt===3){
     return (
       <div  id = "wrapper">
-    <img src = {img4} className='Background fade-in' alt = ""/>
+    <img src = {img4} className='background fade-in' alt = ""/>
       <div className='displayText'>
         <h5>Luxury redefined,</h5>
         <h5>one mile </h5>
