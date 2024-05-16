@@ -10,28 +10,23 @@ const Navbar = () => {
           <img src={logo} className='logo' alt="Porsche" />
           </div>
           <ul className="nav-menu">
-            <Link>
+            <Link to="/">
             <li className="nav-button">Home</li>
             </Link>
-           <Link to="register"> 
-            
-
+            <Link to='/register'>
             <li className="nav-button">Register</li>
             </Link>
-            <Link to="login">
-
+            <Link to='/login'>
             <li className="nav-button">Login</li>
-
             </Link>
-            <Link>
+            <Link to='/home'>
             <li className="nav-button">Explore</li>
             </Link>
-            <Link>
+            <Link to ='/cart'>
             <li className="nav-button">Cart</li>
             </Link>
-
           </ul>
-        </div>
+</div>
   );
 }
 

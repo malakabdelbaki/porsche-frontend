@@ -1,9 +1,16 @@
 .nav{
+  width: 99.9vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 40px 120px;
   position: relative;
+  background: rgba( 255, 255, 255, 0.1 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 14px );
+  -webkit-backdrop-filter: blur( 14px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  overflow-x: hidden;
 }
 
 
@@ -13,6 +20,7 @@
   list-style: none;
   font-size: 18px;
   gap:120px;
+  margin:20px;
 }
 
 .nav-button{
@@ -42,6 +50,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  
 }
 
 .button-35:hover {
@@ -53,5 +62,5 @@
   width: auto;
   max-height: 72px;
   max-width: 250px;
+  padding:20px;
 }
-

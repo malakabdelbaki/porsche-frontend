@@ -1,37 +1,78 @@
 
 
-.product-container {
-  max-width: 600px;
-  margin: 0 auto;
+
+
+.container {
+  background-image: url('../../assets/logo.png'); 
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  height: 100vh; 
+  margin: 0;
+  padding: 0;
+}
+
+.product-wrapper {
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 5px;
   padding: 20px;
+  margin: 20px;
+}
+
+.error-message {
+  color: red;
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
 }
 
 .product-name {
   font-size: 24px;
   font-weight: bold;
-  color: #333;
 }
 
 .product-description {
   margin-top: 10px;
-  font-size: 16px;
-  color: #666;
 }
 
 .product-price {
   margin-top: 10px;
-  font-size: 18px;
-  color: #007bff;
 }
 
 .product-category {
   margin-top: 10px;
-  font-size: 16px;
-  color: #666;
 }
 
 .product-production-year {
   margin-top: 10px;
+}
+
+.product-container {
+  background-color: rgba(255, 255, 255, 0.8); 
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+} 
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
   font-size: 16px;
-  color: #666;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+.btn-danger:active {
+  background-color: #bd2130;
+  transform: scale(1);
 }
