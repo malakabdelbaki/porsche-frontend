@@ -46,7 +46,21 @@ const Product = () => {
 //<button onClick={handleAddToCart}>Add to Cart</button>
   
 
-return (
+const withProductWrapper = (WrappedComponent) => ({ loading, error, product }) => {
+  return (
+    <div className="product-wrapper">
+      {loading ? (
+        <p>Loading...</p>
+      ) : error ? (
+        <p className="error-message">Error: {error}</p>
+      ) : (
+        <WrappedComponent product={product} />
+      )}
+    </div>
+  );
+};
+
+  return (
     <div className="product-container">
       {loading ? (
         <p>Loading...</p>
@@ -70,3 +84,7 @@ return (
 
 export default Product;
 
+
+
+ 
+  
