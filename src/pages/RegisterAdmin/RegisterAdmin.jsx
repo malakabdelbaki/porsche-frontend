@@ -38,27 +38,29 @@ const RegisterAdmin = () => {
   };
 
   return (
-    <div className="register-container">
-      <h2 className="register-heading">Register</h2>
-      <form onSubmit={handleSubmit} className="register-form">
-        <div className="form-group">
-          <label htmlFor="username" className="label">Username</label>
-          <input type="text" id="username" className="input-field" placeholder="Enter your username" name="username" value={username} onChange={handleChange} required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email" className="label">Email</label>
-          <input type="email" id="email" className="input-field" placeholder="Enter your email" name="email" value={email} onChange={handleChange} required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password" className="label">Password</label>
-          <input type="password" id="password" className="input-field" placeholder="Enter your password" name="password" value={password} onChange={handleChange} required />
-        </div>
-        
-        <button type="submit" className="btn">Register</button>
-      </form>
+    <div className='big-container'>
+      <div className="register-container">
+        <h2 className="register-heading">Register</h2>
+        <form onSubmit={handleSubmit} className="register-form">
+          <div className="form-group">
+            <label htmlFor="username" className="label">Username</label>
+            <input type="text" id="username" className="input-field" placeholder="Enter your username" name="username" value={username} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email" className="label">Email</label>
+            <input type="email" id="email" className="input-field" placeholder="Enter your email" name="email" value={email} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password" className="label">Password</label>
+            <input type="password" id="password" className="input-field" placeholder="Enter your password" name="password" value={password} onChange={handleChange} required />
+          </div>
+          
+          <button type="submit" className="btn">Register</button>
+        </form>
+      </div>
     </div>
   );
 };
 
-export default RegisterCustomer;
+export default RegisterAdmin;
 

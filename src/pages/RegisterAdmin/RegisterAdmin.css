@@ -1,12 +1,23 @@
 .register-container {
     max-width: 400px;
     margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 20px;
+    display:flex;
     border-radius: 10px;
     background-color: #333;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   }
   
+  .big-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+  }
+
   .register-heading {
     text-align: center;
     margin-bottom: 20px;
@@ -16,6 +27,11 @@
   
   .register-form .form-group {
     margin-bottom: 20px;
+  }
+
+  .register-form {
+    display:flex;
+    flex-direction: column;
   }
   
   .label {
