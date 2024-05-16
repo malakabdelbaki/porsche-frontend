@@ -9,7 +9,10 @@ import Login from './pages/Login/Login';
 
 import Home from "./pages/Home/Home";
 import Product from "./pages/Product/Product";
-
+import Login from "./pages/Login/Login";
+import Create from './pages/Admin/Create/Create'
+import Delete from './pages/Admin/Delete/Delete'
+import Update from './pages/Admin/Update/Update'
 
 function App() {
 
@@ -26,6 +29,11 @@ function App() {
           
           <Route path="/product/:id" element={<Product />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/admin/create" element={<Create />} /> 
+          <Route path="/admin/delete" element={<Delete />} /> 
+          <Route path="/admin/update" element={<Update />} /> 
+
 
         </Routes>
       </BrowserRouter>
