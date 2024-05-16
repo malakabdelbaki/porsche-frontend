@@ -16,7 +16,7 @@
 .background{
     width:100vw;
     height:100vh;
-    background-image: url('./bg2.svg');
+    background-image: url('./bg.svg');
     display:flex;
     justify-content: center;
     align-items: center;

@@ -40,7 +40,7 @@ const Product = () => {
       const body = {
         productID: id,
       };
-      
+      console.log(body);
       const headers = {headers: {'Content-Type': 'application/json','Authorization': 'Bearer ' + token}};
       await axios.post('http://localhost:3000/api/v1/customer',body,headers);
       alert('Product added to cart successfully!');
