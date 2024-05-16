@@ -45,25 +45,26 @@ const Product = () => {
  //to be added in div 
 //<button onClick={handleAddToCart}>Add to Cart</button>
   
+
 return (
-  <div className="product-container"> {Product.css}
-    {loading ? (
-      <p>Loading...</p>
-    ) : error ? (
-      <p>Error: {error}</p>
-    ) : product ? (
-      <div>
-        <h2>{product.name}</h2>
-        <p>{product.description}</p>
-        <p>Price: ${product.price}</p>
-        <p>Category: {product.category}</p>
-        <p>Production Year: {product.production_year}</p>
-      </div>
-    ) : (
-      <p>No product data available</p>
-    )}
-  </div>
-);
+    <div className="product-container">
+      {loading ? (
+        <p>Loading...</p>
+      ) : error ? (
+        <p className="error-message">Error: {error}</p>
+      ) : product ? (
+        <div>
+          <h2 className="product-name">{product.name}</h2>
+          <p className="product-description">{product.description}</p>
+          <p className="product-price">Price: ${product.price}</p>
+          <p className="product-category">Category: {product.category}</p>
+          <p className="product-production-year">Production Year: {product.production_year}</p>
+        </div>
+      ) : (
+        <p>No product data available</p>
+      )}
+    </div>
+  );
 };
 
 
