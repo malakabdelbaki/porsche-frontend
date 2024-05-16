@@ -12,6 +12,7 @@ const Admin = () => {
   const [productionYear , setProductionYear] = useState("2000-01-01")
   const [quantity, setQuantity] = useState(0)
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [selectedDeleteProduct, setSelectedDeleteProduct] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -50,12 +51,35 @@ const Admin = () => {
 
   const handleSelectChange = (e) => {
     const product = products.find(product => product.name === e.target.value);
+    
     setSelectedProduct(product);
   };
+
+  const handleSelectDeleteChange = (e)=>{
+    const product = products.find(product => product.name === e.target.value);
+    console.log(product);
+    setSelectedDeleteProduct(product);
+    console.log(selectedDeleteProduct);
+  }
 
   const handleInputChange = (e, field) => {
     setSelectedProduct({...selectedProduct, [field]: e.target.value});
   };
+
+
+  function handleDeleteProduct(){
+      const productID = selectedDeleteProduct._id;
+      let token = localStorage.getItem('token');
+      const headers = {headers: {'Content-Type': 'application/json','Authorization': 'Bearer ' + token}};
+      const sendRequest = async () => {
+          const result = await axios.delete(
+            `http://localhost:3000/api/v1/product/${productID}`, { ...headers }
+          );
+          return result;
+      };
+      sendRequest();
+  }
+
 
 
   const handleUpdate = () => {
@@ -79,8 +103,10 @@ const Admin = () => {
   }
 
 
+  
+
   return (
-    <div className="create product">
+    <div className="create-product">
       <h2> Create a new product</h2>
       <form onSubmit={(e)=>handleSubmit(e)}>
         <label> Enter the name of the product:</label>
@@ -196,7 +222,8 @@ const Admin = () => {
            <br />
           <label> Delete Product:</label>
           <br />
-          <select value={selectedProduct} onChange={handleSelectChange}>
+          
+          <select onChange={handleSelectDeleteChange}>
         {products.map((item) => (
           <option key={item._id} value={item.name}>
             {item.name}
@@ -204,7 +231,7 @@ const Admin = () => {
         ))}
       </select>
            <br />
-          <button>Delete</button>
+          <button onClick={()=>handleDeleteProduct()}> Delete</button>
 
       </form>
 
