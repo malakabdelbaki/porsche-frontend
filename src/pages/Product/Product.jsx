@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import React, { Component } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import "./Product.css";
@@ -32,18 +33,18 @@ const Product = () => {
     fetchProduct();
   }, [id]);
 
-  // const handleAddToCart = async () => {
-  //   try {
-  //     // Send a POST request to the backend to add the product to the cart
-  //     await axios.post('/api/v1/purchase', { productId: id });
-  //     alert('Product added to cart successfully!');
-  //   } catch (error) {
-  //     console.error('Error adding product to cart:', error);
-  //     alert('Failed to add product to cart. Please try again later.');
-  //   }
-  // };
- //to be added in div 
-//<button onClick={handleAddToCart}>Add to Cart</button>
+  const handleAddToCart = async () => {
+    try {
+      // Send a POST request to the backend to add the product to the cart
+      await axios.post('http://localhost:3000/api/v1/customer');
+      alert('Product added to cart successfully!');
+    } catch (error) {
+      console.error('Error adding product to cart:', error);
+      alert('Failed to add product to cart. Please try again later.');
+    }
+  };
+ 
+<button onClick={handleAddToCart}>Add to Cart</button>
   
 
 const withProductWrapper = (WrappedComponent) => ({ loading, error, product }) => {
@@ -73,6 +74,7 @@ const withProductWrapper = (WrappedComponent) => ({ loading, error, product }) =
           <p className="product-price">Price: ${product.price}</p>
           <p className="product-category">Category: {product.category}</p>
           <p className="product-production-year">Production Year: {product.production_year}</p>
+          <button className="btn-danger" onClick={handleAddToCart}>Add to Cart</button>
         </div>
       ) : (
         <p>No product data available</p>
