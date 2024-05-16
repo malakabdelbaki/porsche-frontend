@@ -13,11 +13,15 @@ const Navbar = () => {
             <Link>
             <li className="nav-button">Home</li>
             </Link>
-            <Link>
+           <Link to="register"> 
+            
+
             <li className="nav-button">Register</li>
             </Link>
-            <Link>
+            <Link to="Login">
+
             <li className="nav-button">Login</li>
+
             </Link>
             <Link>
             <li className="nav-button">Explore</li>
@@ -25,6 +29,7 @@ const Navbar = () => {
             <Link>
             <li className="nav-button">Cart</li>
             </Link>
+
           </ul>
         </div>
   );
