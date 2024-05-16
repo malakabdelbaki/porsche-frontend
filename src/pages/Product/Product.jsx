@@ -3,6 +3,7 @@ import { Component } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import "./Product.css";
+import Navbar from '../Navbar/Navbar';
 
 
 const Product = () => {
@@ -68,7 +69,9 @@ const withProductWrapper = (WrappedComponent) => ({ loading, error, product }) =
 };
 
 return (
-  <div className="container">
+  <div>
+    <Navbar />
+  <div className="productPageContainer">
     <div className="product-container">
       {loading ? (
         <p>Loading...</p>
@@ -87,6 +90,7 @@ return (
         <p>No product data available</p>
       )}
     </div>
+  </div>
   </div>
 );
 };

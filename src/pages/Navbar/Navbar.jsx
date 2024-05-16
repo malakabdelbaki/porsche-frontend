@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-
 import './Navbar.css'
 import logo from '../../assets/logo.png'
+
 const Navbar = () => {
+  const type = localStorage.getItem('type');
+  console.log(type);
   return (
 <div className="nav">
           <div>
@@ -25,6 +27,11 @@ const Navbar = () => {
             <Link to ='/cart'>
             <li className="nav-button">Cart</li>
             </Link>
+            {type == 'admin' && (
+          <Link to='/admin'>
+            <li className="nav-button">Admin</li>
+          </Link>
+        )}
           </ul>
 </div>
   );

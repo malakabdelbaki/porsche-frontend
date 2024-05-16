@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './RegisterAdmin.css';
+import Navbar from '../Navbar/Navbar';
 
 const RegisterAdmin = () => {
   const [formData, setFormData] = useState({
@@ -38,6 +39,8 @@ const RegisterAdmin = () => {
   };
 
   return (
+    <div>
+      <Navbar />
     <div className="register-container">
       <h2 className="register-heading">Register</h2>
       <form onSubmit={handleSubmit} className="register-form">
@@ -56,6 +59,7 @@ const RegisterAdmin = () => {
         
         <button type="submit" className="btn">Register</button>
       </form>
+    </div>
     </div>
   );
 };

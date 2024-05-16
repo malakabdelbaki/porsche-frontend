@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './RegisterCustomer.css';
+import Navbar from '../Navbar/Navbar';
 
 const RegisterCustomer = () => {
   const [formData, setFormData] = useState({
@@ -44,7 +45,9 @@ const RegisterCustomer = () => {
   };
 
   return (
-    <div className="body">
+    <div>
+      <Navbar />
+    <div className="register">
 
     
     <div className="register-container">
@@ -80,6 +83,7 @@ const RegisterCustomer = () => {
         </div>
         <button type="submit" className="btn">Register</button>
       </form>
+    </div>
     </div>
     </div>
   );

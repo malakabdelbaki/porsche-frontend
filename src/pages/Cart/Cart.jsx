@@ -3,6 +3,8 @@ import axios from 'axios'
 import { MdDelete } from "react-icons/md";
 import './Cart.css'
 import { useNavigate } from "react-router-dom";
+import Navbar from '../Navbar/Navbar';
+
 function Cart() {
     const navigate = useNavigate();
     const [cart,setCart] = useState([]);
@@ -61,6 +63,8 @@ function Cart() {
     },[cart])
 
   return (
+    <div>
+      <Navbar />
     <main className='background'>
       <div className='wrapper'>
         <div>
@@ -86,6 +90,7 @@ function Cart() {
 
       </div>
     </main>
+    </div>
   )
 }
 

@@ -1,5 +1,5 @@
-body {
-  background-image: url("../../assets/porsche img.jpeg");
+.loginbody {
+  background-image: url("../../assets/background.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;

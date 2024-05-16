@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
+import Navbar from '../Navbar/Navbar';
 
 import './Home.css';
 
@@ -54,6 +55,8 @@ const Home = () => {
     };
 
     return (
+        <div>
+            <Navbar />
         <div className="container">
             <h1>Find Your Dream Prosche</h1>
             <input
@@ -79,6 +82,7 @@ const Home = () => {
                     </div>
                 ))}
             </div>
+        </div>
         </div>
     );
 };
