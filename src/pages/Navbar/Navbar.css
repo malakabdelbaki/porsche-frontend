@@ -1,5 +1,5 @@
 .nav{
-  width:100%;
+  width: 99.9vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,6 +50,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  
 }
 
 .button-35:hover {
@@ -63,4 +64,3 @@
   max-width: 250px;
   padding:20px;
 }
-
