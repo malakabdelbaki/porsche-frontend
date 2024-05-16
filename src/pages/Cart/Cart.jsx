@@ -61,28 +61,31 @@ function Cart() {
     },[cart])
 
   return (
-    <div className='wrapper'>
-      <div>
-      {cart.map((product)=>{
-        return (
-            <div className="productCard" key={product._id}>
-                <h2>{product.name}</h2>
-                <div className='price'>
-                <p>${product.price}</p>
-                <button className='delete_button' onClick={()=>handleDelete(product._id)}>
-                <MdDelete size={30} />
-                </button>
-                </div>
-            </div>
-        )
-      })}
-      {cart.length===0 && <h2>Your cart is empty</h2>}
-      </div>
-      <div className='total'>
-        <p>Total: ${total}</p>
+    <main className='background'>
+      <div className='wrapper'>
+        <div>
+        {cart.map((product)=>{
+          return (
+              <div className="productCard" key={product._id}>
+                  <h2>{product.name}</h2>
+                  <div className='price'>
+                  <p>${product.price}</p>
+                  <button className='delete_button' onClick={()=>handleDelete(product._id)}>
+                  <MdDelete size={30} />
+                  </button>
+                  </div>
+              </div>
+          )
+        })}
+        {cart.length===0 && <h2>Your cart is empty</h2>}
+        </div>
+        <div className='total'>
+          <p>Total: ${total}</p>
         <button className='checkout_button' onClick={()=>handleCheckout()}>Checkout</button>
+        </div>
+
       </div>
-    </div>
+    </main>
   )
 }
 
