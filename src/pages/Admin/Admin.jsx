@@ -143,6 +143,7 @@ const Admin = () => {
           </option>
         ))}
       </select>
+      <label> Enter name:</label>
       <input 
           type="text"
           required  
@@ -156,17 +157,52 @@ const Admin = () => {
           required
           value={selectedProduct ? selectedProduct.price : ''} 
           onChange={(e)=>handleInputChange(e, 'price')}
+          />
+        <br />
+        <label> Description:</label>
+        <input 
+          type="text"
+          required
+          value={selectedProduct ? selectedProduct.description : ''} 
+          onChange={(e)=>handleInputChange(e, 'description')}
         />
+        <br />
+        <label> Enter category:</label>
+        <input 
+          type="text"
+          required
+          value={selectedProduct ? selectedProduct.category : ''} 
+          onChange={(e)=>handleInputChange(e, 'category')}
+          />
+          <br />
+        <label> production year:</label>
+        <input 
+          type="date"
+          required
+          value={selectedProduct ? selectedProduct.productionyear : ''} 
+          onChange={(e)=>handleInputChange(e, 'productionyear')}
+          />
+          <br />
+        <label> Enter quantity:</label>
+        <input 
+          type="number"
+          required
+          value={selectedProduct ? selectedProduct.quantity : ''} 
+          onChange={(e)=>handleInputChange(e, 'quantity')}
+          />
            <br />
            <button onClick={()=>handleUpdate()}>Update</button>
            <br />
            <br />
           <label> Delete Product:</label>
           <br />
-          <select>
-           
-           onChange={(e)=> setName(e.target.value)}
-           </select>
+          <select value={selectedProduct} onChange={handleSelectChange}>
+        {products.map((item) => (
+          <option key={item._id} value={item.name}>
+            {item.name}
+          </option>
+        ))}
+      </select>
            <br />
           <button>Delete</button>
 
