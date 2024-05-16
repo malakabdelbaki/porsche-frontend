@@ -36,7 +36,13 @@ const Product = () => {
   const handleAddToCart = async () => {
     try {
       // Send a POST request to the backend to add the product to the cart
-      await axios.post('http://localhost:3000/api/v1/customer');
+      let token = localStorage.getItem('token');
+      const body = {
+        productID: id,
+      };
+      
+      const headers = {headers: {'Content-Type': 'application/json','Authorization': 'Bearer ' + token}};
+      await axios.post('http://localhost:3000/api/v1/customer',body,headers);
       alert('Product added to cart successfully!');
     } catch (error) {
       console.error('Error adding product to cart:', error);
