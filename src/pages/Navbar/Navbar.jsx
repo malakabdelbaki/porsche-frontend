@@ -18,7 +18,7 @@ const Navbar = () => {
 
             <li className="nav-button">Register</li>
             </Link>
-            <Link to="Login">
+            <Link to="login">
 
             <li className="nav-button">Login</li>
 
