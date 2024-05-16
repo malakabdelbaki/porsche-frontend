@@ -67,7 +67,8 @@ const withProductWrapper = (WrappedComponent) => ({ loading, error, product }) =
   );
 };
 
-  return (
+return (
+  <div className="container">
     <div className="product-container">
       {loading ? (
         <p>Loading...</p>
@@ -86,7 +87,8 @@ const withProductWrapper = (WrappedComponent) => ({ loading, error, product }) =
         <p>No product data available</p>
       )}
     </div>
-  );
+  </div>
+);
 };
 
 
