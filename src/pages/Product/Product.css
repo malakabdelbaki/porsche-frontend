@@ -3,13 +3,16 @@
 
 
 .productPageContainer {
-  background-image: url('../../assets/logo.png'); 
+  /* background-image: url('../../assets/logo.png');  */
   background-size: cover;
   background-position: center;
   font-family: Arial, sans-serif;
   height: 100vh; 
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .product-wrapper {
@@ -53,6 +56,7 @@
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 20px;
+  max-width: 1000px;
 } 
 
 .btn-danger {

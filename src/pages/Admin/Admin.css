@@ -18,7 +18,7 @@
 .background{
   width:100vw;
   height:100vh;
-  background-image: url('../Cart/bg.svg');
+  /* background-image: url('../Cart/bg.svg'); */
   display:flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +61,6 @@
      cursor: pointer;
     width: 100%;
     padding: 10px;
-    margin-top: 20px;
     border-radius: 5px;
   background-color: #B12B28;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -76,5 +75,11 @@
   
   button:hover {
     background-color: #555;
+  }
+
+  .admin_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
   }
   

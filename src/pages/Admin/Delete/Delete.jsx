@@ -46,7 +46,7 @@ const Delete = () => {
           );
           return result;
       };
-      sendRequest();
+      sendRequest().then(alert('Product deleted successfully!'));
   }
 
   

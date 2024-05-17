@@ -34,24 +34,19 @@
     font-size: 14px; /* Adjust the font size */
     color: #fff;
   }
-  
-  .input-field {
-    width: calc(100% - 20px); /* Adjust width to be slightly smaller than 100% */
+
+
+  .inputContainer input {
+    display: block;
+    width: 100%;
     padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    border: 1px solid #777;
-    background-color: #444;
-    color: #fff;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
+    box-sizing: border-box;
   }
-  
-  .input-field:focus {
-    border-color: #007bff;
-    background-color: #555;
-    outline: none;
-  }
-  
-  .btn {
+  .login_button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #d21e2e;
@@ -60,10 +55,6 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top:20px;
   }
-  
-  .btn:hover {
-    background-color: #a61722;
-  }
-  
   

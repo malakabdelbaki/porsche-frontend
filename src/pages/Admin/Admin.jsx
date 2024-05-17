@@ -12,18 +12,20 @@ const Admin = () => {
       <main className='background'>
     <div className="product">
       <h2> What would you like to do?</h2>
+        <div className='admin_buttons'>
+
+        
           <br />
           <Link to='create'>
           <button>Create a new product</button>
           </Link>
-          <br />
-          <Link to='delete'>
+          <Link to='update'>
            <button>Update a product</button>
            </Link>
-           <br />
-           <Link to='update'>
+           <Link to='delete'>
           <button> Delete a product</button>
           </Link>
+          </div>
     </div>
     </main>
 </div>

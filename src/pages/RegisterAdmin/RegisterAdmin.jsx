@@ -25,7 +25,6 @@ const RegisterAdmin = () => {
         username,
         email,
         password,
-       
       };
 
       const response = await axios.post('http://localhost:3000/api/v1/registerAdmin', body);
@@ -64,5 +63,5 @@ const RegisterAdmin = () => {
   );
 };
 
-export default RegisterCustomer;
+export default RegisterAdmin;
 
