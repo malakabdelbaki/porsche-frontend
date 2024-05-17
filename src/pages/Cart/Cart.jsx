@@ -9,6 +9,7 @@ function Cart() {
     const navigate = useNavigate();
     const [cart,setCart] = useState([]);
     const [total,setTotal] = useState(0);
+    const [confirm_msg, setconfirmmsg]= useState('')
 
     function handleDelete(productID){
       const data = {productID:productID}
@@ -35,12 +36,14 @@ function Cart() {
       const headers = {headers: {'Content-Type': 'application/json','Authorization': 'Bearer ' + token}};
       const sendRequest = async () => {
           const result = await axios.post(
-            `http://localhost:3000/api/v1/purchase`, {}, headers
+            `http://localhost:3000/api/v1/purchase`, headers
           );
           return result;
       };
-      sendRequest().then((result)=>console.log(result));
-    }
+      sendRequest().then((result) => {
+        setconfirmmsg(result); 
+    });
+}
 
     
 
@@ -87,7 +90,9 @@ function Cart() {
           <p>Total: ${total}</p>
         <button className='checkout_button' onClick={()=>handleCheckout()}>Checkout</button>
         </div>
-
+        <div className="confirm_msg">
+          {confirm_msg && <p>{confirm_msg}</p>}
+        </div>
       </div>
     </main>
     </div>
