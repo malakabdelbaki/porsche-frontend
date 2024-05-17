@@ -1,11 +1,13 @@
 
 body {
-  background-image: url("../../assets/porsche img.jpeg");
+  background-image: url("../../assets/background.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   font-family: "Teko";
-  font-size: 24px;}
+  font-size: 24px;
+}
+
 .register-container {
     min-width: 400px;
     margin: 30px;

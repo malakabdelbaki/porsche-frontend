@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import axios from 'axios';
+import Navbar from '../../Navbar/Navbar';
 
 import '../Admin.css'
 
@@ -61,6 +62,8 @@ const Update = () => {
   
 
   return (
+    <div>
+      <Navbar />
     <div className="product">
       <h2> Update a product</h2>
           <br />
@@ -123,6 +126,7 @@ const Update = () => {
            <br />
            <button onClick={()=>handleUpdate()}>Update</button>
            <br />
+    </div>
     </div>
 
   )

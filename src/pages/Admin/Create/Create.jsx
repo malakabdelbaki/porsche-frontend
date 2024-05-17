@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import axios from 'axios';
-
+import Navbar from '../../Navbar/Navbar';
 import '../Admin.css'
 
 const Create = () => {
@@ -50,6 +50,8 @@ const Create = () => {
   }
 
   return (
+    <div>
+      <Navbar />
     <div className="product">
       <h2> Create a new product</h2>
       <form onSubmit={(e)=>handleSubmit(e)}>
@@ -105,6 +107,7 @@ const Create = () => {
           <br />
       </form>
 
+    </div>
     </div>
 
   )

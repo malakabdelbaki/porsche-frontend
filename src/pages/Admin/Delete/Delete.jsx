@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import axios from 'axios';
+import Navbar from '../../Navbar/Navbar';
 
 import '../Admin.css'
 
@@ -51,6 +52,8 @@ const Delete = () => {
   
 
   return (
+<div>
+      <Navbar />
     <div className="product">
       <h2> Delete a product</h2>
           <br />          
@@ -64,8 +67,9 @@ const Delete = () => {
            <br />
           <button onClick={()=>handleDeleteProduct()}> Delete</button>
     </div>
+    </div>
 
   )
 }
 
-export default Delete
+export default Delete;

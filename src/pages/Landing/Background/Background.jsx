@@ -14,8 +14,7 @@ const Background = ({playStatus, cnt}) =>{
     <img src = {img1} className='background fade-in' alt = ""/>
       <div className='displayText'>
         <h5>Elevate your drive</h5>
-        <h5>to a symphony </h5>
-        <h5>of opulence.</h5>
+        <h5>to a symphony of opulence.</h5>
       </div>
     </div>
     )
@@ -26,8 +25,7 @@ const Background = ({playStatus, cnt}) =>{
     <img src = {img2} className='background fade-in' alt = ""/>
       <div className='displayText'>
         <h5>Indulge in the artistry</h5>
-        <h5>of automotive </h5>
-        <h5> luxury.</h5>
+        <h5>of automotive luxury.</h5>
       </div>
     </div>
     )
@@ -37,9 +35,8 @@ const Background = ({playStatus, cnt}) =>{
       <div  id = "wrapper">
     <img src = {img3} className='background fade-in' alt = ""/>
       <div className='displayText'>
-        <h5>Where sophistication meets</h5>
-        <h5>exhilaration on every  </h5>
-        <h5>road.</h5>
+        <h5>Where sophistication</h5>
+        <h5>meets exhilaration on every road</h5>
       </div>
     </div>
     )
@@ -50,8 +47,7 @@ const Background = ({playStatus, cnt}) =>{
     <img src = {img4} className='background fade-in' alt = ""/>
       <div className='displayText'>
         <h5>Luxury redefined,</h5>
-        <h5>one mile </h5>
-        <h5>at a time.</h5>
+        <h5>one mile at a time.</h5>
       </div>
     </div>
     )

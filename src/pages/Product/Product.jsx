@@ -3,6 +3,7 @@ import { Component } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import "./Product.css";
+import Navbar from '../Navbar/Navbar';
 
 
 const Product = () => {
@@ -10,6 +11,7 @@ const Product = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const type = localStorage.getItem('type');
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -68,7 +70,9 @@ const withProductWrapper = (WrappedComponent) => ({ loading, error, product }) =
 };
 
 return (
-  <div className="container">
+  <div>
+    <Navbar />
+  <div className="productPageContainer">
     <div className="product-container">
       {loading ? (
         <p>Loading...</p>
@@ -81,12 +85,16 @@ return (
           <p className="product-price">Price: ${product.price}</p>
           <p className="product-category">Category: {product.category}</p>
           <p className="product-production-year">Production Year: {product.production_year}</p>
+          {type=='customer' &&(
           <button className="btn-danger" onClick={handleAddToCart}>Add to Cart</button>
+        )
+          }
         </div>
       ) : (
         <p>No product data available</p>
       )}
     </div>
+  </div>
   </div>
 );
 };

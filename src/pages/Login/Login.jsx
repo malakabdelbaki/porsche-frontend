@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import Navbar from '../Navbar/Navbar';
 import './Login.css';
 
 function Login() {
@@ -15,11 +15,13 @@ function Login() {
         password,
       });
 
-      const { token, userID, msg } = response.data;
+      const { token, msg, userID, type } = response.data;
 
       if (token) {
         localStorage.setItem('token', token);
         localStorage.setItem('userID', userID);
+        localStorage.setItem('type', type);
+
         setErrorMsg(msg);
         // You can redirect the user to another page or perform other actions upon successful login
       } else {
@@ -30,7 +32,11 @@ function Login() {
       setErrorMsg('Error occurred during login. Please try again later.');
     }
   }; 
+
+
   return (
+    <div className='loginbody'>
+      <Navbar />
     <div className="loginContainer">
       <h2>Login</h2>
       <div className="errorMsg">{errorMsg}</div>
@@ -44,6 +50,7 @@ function Login() {
       </div>
       <button onClick={handleLogin} className="btn red">Login</button>
     </div>
+  </div>
   );
   
   

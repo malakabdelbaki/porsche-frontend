@@ -5,6 +5,8 @@
     border-radius: 10px;
     background-color: #333;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background-image: url("../../assets/background.jpg");
+
   }
   
   .register-heading {
