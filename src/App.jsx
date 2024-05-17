@@ -31,8 +31,6 @@ function App() {
           <Route path="/admin/create" element={<Create />} /> 
           <Route path="/admin/delete" element={<Delete />} /> 
           <Route path="/admin/update" element={<Update />} /> 
-
-
         </Routes>
       </BrowserRouter>
     </div>

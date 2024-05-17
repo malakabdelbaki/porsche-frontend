@@ -55,7 +55,7 @@ const Update = () => {
       );
       return result;
     };
-    sendRequest().then((result)=>console.log(result));
+    sendRequest().then(alert('Product updated successfully!'));
   }
 
 

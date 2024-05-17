@@ -52,23 +52,7 @@ const Product = () => {
     }
   };
  
-<button onClick={handleAddToCart}>Add to Cart</button>
   
-
-const withProductWrapper = (WrappedComponent) => ({ loading, error, product }) => {
-  return (
-    <div className="product-wrapper">
-      {loading ? (
-        <p>Loading...</p>
-      ) : error ? (
-        <p className="error-message">Error: {error}</p>
-      ) : (
-        <WrappedComponent product={product} />
-      )}
-    </div>
-  );
-};
-
 return (
   <div>
     <Navbar />
@@ -79,7 +63,7 @@ return (
       ) : error ? (
         <p className="error-message">Error: {error}</p>
       ) : product ? (
-        <div>
+        <div className='product-container'>
           <h2 className="product-name">{product.name}</h2>
           <p className="product-description">{product.description}</p>
           <p className="product-price">Price: ${product.price}</p>

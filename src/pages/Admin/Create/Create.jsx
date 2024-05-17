@@ -46,7 +46,7 @@ const Create = () => {
       );
       return result;
     };
-    sendRequest().then((result)=>console.log(result));
+    sendRequest().then(alert('Product created successfully!'));
   }
 
   return (

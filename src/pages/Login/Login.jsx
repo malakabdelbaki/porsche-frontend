@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Navbar from '../Navbar/Navbar';
 import './Login.css';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
-
+  const navigate = useNavigate();
   const handleLogin = async () => {
     try {
       const response = await axios.post('http://localhost:3000/api/v1/login', {
@@ -23,6 +24,7 @@ function Login() {
         localStorage.setItem('type', type);
 
         setErrorMsg(msg);
+        navigate('/')
         // You can redirect the user to another page or perform other actions upon successful login
       } else {
         setErrorMsg(msg);
@@ -48,7 +50,7 @@ function Login() {
         <label className="label">Password</label>
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
       </div>
-      <button onClick={handleLogin} className="btn red">Login</button>
+      <button onClick={handleLogin} className="login_button">Login</button>
     </div>
   </div>
   );
