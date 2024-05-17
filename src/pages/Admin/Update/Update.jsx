@@ -65,7 +65,7 @@ const Update = () => {
     <div>
       <Navbar />
     <div className="product">
-      <h2> Update a product</h2>
+    <div className='title'> Update a product</div>
           <br />
           <label> Select Product:</label>
           <br />

@@ -53,7 +53,7 @@ const Create = () => {
     <div>
       <Navbar />
     <div className="product">
-      <h2> Create a new product</h2>
+      <div className='title'> Create a new product</div>
       <form onSubmit={(e)=>handleSubmit(e)}>
         <label> Enter the name of the product:</label>
         <input 

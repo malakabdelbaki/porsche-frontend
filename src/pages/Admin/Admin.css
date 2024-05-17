@@ -12,8 +12,37 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-top: 100px;
+    margin-left: 100px;
   }
 
+  .controller {
+    
+    padding: 20px;
+    display: column;
+    width:600px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 10px;
+  }
+
+
+  .question{
+    color: white;
+    align-items: center;
+    font-size: 30px;
+    background-color: #022e0b; /* Dark background for input */
+padding: 20px;
+border-radius: 20px;
+align-items: center;
+justify-content: center;
+font-style: bold;
+text-align: center;
+
+
+}
   
 .background{
   width:100vw;
@@ -26,10 +55,16 @@
     background-size: cover;
 }
 
+.title{
+  color: #333;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
   
   h2 {
     text-align: center;
-    color: #333;
+    color:#333;
   }
   
   label {
@@ -70,6 +105,7 @@
   color:white;
   font-size:1.2rem;
   border-radius:5px;
+  height: 50px;
 }
 
   

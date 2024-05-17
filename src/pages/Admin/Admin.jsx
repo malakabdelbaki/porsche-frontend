@@ -10,8 +10,8 @@ const Admin = () => {
     <div>
       <Navbar />
       <main className='background'>
-    <div className="product">
-      <h2> What would you like to do?</h2>
+    <div className="controller">
+      <div className='question'> What would you like to do today?</div>
         <div className='admin_buttons'>
 
         

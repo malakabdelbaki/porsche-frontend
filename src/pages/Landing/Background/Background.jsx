@@ -36,7 +36,7 @@ const Background = ({playStatus, cnt}) =>{
     <img src = {img3} className='background fade-in' alt = ""/>
       <div className='displayText'>
         <h5>Where sophistication</h5>
-        <h5>meets exhilaration on every road</h5>
+        <h5>meets exhilaration on every road.</h5>
       </div>
     </div>
     )

@@ -6,20 +6,21 @@
   /* background-image: url('../../assets/logo.png');  */
   background-size: cover;
   background-position: center;
-  font-family: Arial, sans-serif;
-  height: 100vh; 
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 110px;
+
 }
 
 .product-wrapper {
-  background-color: rgba(255, 255, 255, 0.8); 
+  background-color: #022e0b;
   border-radius: 5px;
   padding: 20px;
   margin: 20px;
+  
 }
 
 .error-message {
@@ -30,7 +31,9 @@
 }
 
 .product-name {
-  font-size: 24px;
+  font-size: 30px;
+  color:white; /* White text */
+
   font-weight: bold;
 }
 
@@ -51,12 +54,13 @@
 }
 
 .product-container {
-  background-color: rgba(255, 255, 255, 0.8); 
-  border: 1px solid #ddd;
+  background-color: #022e0b; 
+  color:white; /* White text */
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 20px;
   max-width: 1000px;
+
 } 
 
 .btn-danger {
@@ -72,7 +76,8 @@
 }
 
 .btn-danger:hover {
-  background-color: #c82333;
+  background-color: #baf4c6;
+  color: white;
   transform: scale(1.05);
 }
 
