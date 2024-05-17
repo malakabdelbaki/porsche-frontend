@@ -86,10 +86,9 @@
 }
 
 .confirm_msg{
-color:white;
-background-color:green;
-border-radius: 50px;
-
-
-
+color:black;
+background-color:white;
+width:300px;
+padding:10px;
+border-radius: 10px;
 }

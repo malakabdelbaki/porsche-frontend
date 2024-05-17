@@ -41,7 +41,8 @@ function Cart() {
           return result;
       };
       sendRequest().then((result) => {
-        setconfirmmsg(result); 
+        // console.log(result.data.message);
+        setconfirmmsg(result.data.message); 
     });
 }
 
@@ -59,7 +60,7 @@ function Cart() {
         };
         
         fetchData().then((response)=>{setCart(response.cart);});
-    },[])
+    },[confirm_msg])
 
     useEffect(()=>{
       setTotal((cart.reduce((acc,product)=>acc+product.price,0)));
@@ -70,8 +71,8 @@ function Cart() {
       <Navbar />
     <main className='background'>
       <div className='wrapper'>
-        <div>
-        {cart.map((product)=>{
+        {!confirm_msg? (<><div>
+        {cart && cart.map((product)=>{
           return (
               <div className="productCard" key={product._id}>
                   <h2>{product.name}</h2>
@@ -89,10 +90,10 @@ function Cart() {
         <div className='total'>
           <p>Total: ${total}</p>
         <button className='checkout_button' onClick={()=>handleCheckout()}>Checkout</button>
-        </div>
+        </div></>):(
         <div className="confirm_msg">
           {confirm_msg && <p>{confirm_msg}</p>}
-        </div>
+        </div>)}
       </div>
     </main>
     </div>
