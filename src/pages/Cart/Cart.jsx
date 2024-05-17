@@ -36,7 +36,7 @@ function Cart() {
       const headers = {headers: {'Content-Type': 'application/json','Authorization': 'Bearer ' + token}};
       const sendRequest = async () => {
           const result = await axios.post(
-            `http://localhost:3000/api/v1/purchase`, headers
+            `http://localhost:3000/api/v1/purchase`, {},headers
           );
           return result;
       };
