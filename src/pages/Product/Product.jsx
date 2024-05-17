@@ -11,6 +11,7 @@ const Product = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const type = localStorage.getItem('type');
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -84,7 +85,10 @@ return (
           <p className="product-price">Price: ${product.price}</p>
           <p className="product-category">Category: {product.category}</p>
           <p className="product-production-year">Production Year: {product.production_year}</p>
+          {type=='customer' &&(
           <button className="btn-danger" onClick={handleAddToCart}>Add to Cart</button>
+        )
+          }
         </div>
       ) : (
         <p>No product data available</p>
