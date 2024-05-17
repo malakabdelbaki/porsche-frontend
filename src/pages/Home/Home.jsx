@@ -58,7 +58,7 @@ const Home = () => {
         <div>
             <Navbar />
         <div className="container">
-            <h1>Find Your Dream Prosche</h1>
+            <h1>Find Your Dream Porsche</h1>
             <input
                 type="text"
                 className="search-input"

@@ -1,24 +1,22 @@
 /* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    /* color: #fff; White text */
-}
 
-/* Container */
 .container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    margin-top: 50px;
+    margin-top: 110px;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Header */
 h1 {
     text-align: center;
-    font-size: 2.5rem;
-    color: #fff; /* White text */
+    font-size: 3rem;
+    color:white; /* White text */
+    background-color: #022e0b; /* Dark background for input */
+    border-radius: 15px;
+    height: 80px;
     margin-bottom: 20px;
 }
 
@@ -30,7 +28,7 @@ h1 {
     border: 1px solid #d10000; /* Red border */
     border-radius: 5px;
     margin-bottom: 20px;
-    background-color: #333; /* Dark background for input */
+    background-color: #022e0b; /* Dark background for input */
     color: #fff; /* White text */
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
@@ -44,8 +42,7 @@ h1 {
 
 /* Product Box */
 .product-box {
-    background-color: #333; /* Dark gray background */
-    border: 1px solid #d10000; /* Red border */
+    background-color: #022e0b; /* Dark gray background */
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
@@ -67,7 +64,7 @@ h1 {
 
 /* Product Details */
 .product-box p {
-    font-size: 1rem;
+    font-size: 1.8rem;
     margin: 5px 0;
     color: #ccc; /* Light gray text for details */
 }

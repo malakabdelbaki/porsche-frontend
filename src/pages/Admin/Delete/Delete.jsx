@@ -55,7 +55,7 @@ const Delete = () => {
 <div>
       <Navbar />
     <div className="product">
-      <h2> Delete a product</h2>
+    <div className='title'> Delete a product</div>
           <br />          
           <select onChange={handleSelectDeleteChange}>
         {products.map((item) => (
