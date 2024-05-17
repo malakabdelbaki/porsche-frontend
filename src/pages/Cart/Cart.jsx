@@ -75,7 +75,7 @@ function Cart() {
         {cart && cart.map((product)=>{
           return (
               <div className="productCard" key={product._id}>
-                  <h2>{product.name}</h2>
+                  <div className='prod'>{product.name}</div>
                   <div className='price'>
                   <p>${product.price}</p>
                   <button className='delete_button' onClick={()=>handleDelete(product._id)}>
@@ -85,7 +85,7 @@ function Cart() {
               </div>
           )
         })}
-        {cart.length===0 && <h2>Your cart is empty</h2>}
+        {cart.length===0 && <div className='prod'>Your cart is empty</div>}
         </div>
         <div className='total'>
           <p>Total: ${total}</p>
