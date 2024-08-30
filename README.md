@@ -14,7 +14,7 @@ npm install
 npm run dev
 ```
 
-###Pages
+### Pages
 
 1. Login Page
 2. Admin Registration Page
