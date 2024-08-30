@@ -25,7 +25,3 @@ npm run dev
 7. Admin Page
 
 
-```
-https://github.com/yousefnegmeldin/notAnotherTaskApp/tree/main/client/src
-https://github.com/yousefnegmeldin/filmpire
-```
